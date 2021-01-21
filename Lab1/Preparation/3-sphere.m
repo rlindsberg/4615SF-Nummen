@@ -13,7 +13,7 @@ J = @(x,y,z) [ 2*x - 2, 2*y + 4, 2*z ; 2*x + 4, 2*y - 4, 2*z + 2; 2*x - 8, 2*y +
 fkoll=f(10,10,10);
 Jkoll=J(10,10,10);
 
-xstart=[-0.2,3.5];  % fyll i startgissning för x (ett värde för varje skärningspunkt)
+xstart=[-0.2,-3.5];  % fyll i startgissning för x (ett värde för varje skärningspunkt)
 ystart=[3,0.06];  % fyll i startgissning för y (ett värde för varje skärningspunkt)
 zstart=[-3,2.4];  % fyll i startgissning för z (ett värde för varje skärningspunkt)
 
@@ -43,7 +43,7 @@ for j = 1:100
         %RK: take a step
         x = x + h(1);
         y = y + h(2);
-        z = z+ h(3);
+        z = z + h(3);
     end
 end
 % När Newton är klar, lagra resultatet i radvektorerna
